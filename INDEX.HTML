@@ -1427,29 +1427,27 @@
             <a href="tel:+6285232416239">+62 852-3241-6239</a>
           </div>
         </div>
-        <form
-          class="contact-form"
-          action="https://formspree.io/f/xvgebelz"
-          method="POST"
-        >
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
+      <form class="contact-form" action="https://formspree.io/f/xvgebelz" method="POST">
+          <input type="hidden" name="_subject" value="New contact form submission">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required />
+  </div>
 
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+  </div>
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
 
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-      </div>
+  <button type="submit" class="submit-btn">Send Message</button>
+
+</form>
+
     </section>
 
     <!-- CTA SECTION -->
@@ -1625,7 +1623,7 @@
       const contactForm = document.querySelector(".contact-form");
 
       contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
