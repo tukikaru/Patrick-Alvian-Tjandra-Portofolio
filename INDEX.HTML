@@ -529,97 +529,181 @@
       }
 
       /* ===== CONTACT SECTION ===== */
-      .contact-container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+     /* ===== CONTACT SECTION - UPDATED STYLE ===== */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-      .contact-info {
-        text-align: center;
-        margin-bottom: 3rem;
-      }
+.contact-info {
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
-      .contact-item {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.8rem;
-        margin: 1rem 2rem;
-        font-size: 1.1rem;
-        color: var(--text-gray);
-      }
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1rem 2rem;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
 
-      .contact-item a {
-        color: var(--secondary-color);
-        text-decoration: none;
-        transition: var(--transition);
-      }
+.contact-item a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
 
-      .contact-item a:hover {
-        color: var(--text-light);
-      }
+.contact-item a:hover {
+    color: var(--text-light);
+}
 
-      .contact-form {
-        background: var(--card-bg);
-        padding: 3rem;
-        border-radius: 15px;
-        border: 1px solid rgba(10, 110, 211, 0.1);
-      }
+/* ===== FORM STYLING ===== */
+.contact-form {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(10, 110, 211, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-      .form-group {
-        margin-bottom: 1.5rem;
-      }
+.contact-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
 
-      .form-group label {
+.email-name {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.contact-form .req {
+    color: var(--secondary-color);
+    margin-left: 2px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: var(--primary-color);
+    border: 2px solid rgba(10, 110, 211, 0.2);
+    border-radius: 10px;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-gray);
+    opacity: 0.6;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(10, 110, 211, 0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 180px;
+}
+
+.contact-form .msg {
+    margin-bottom: 2rem;
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.contact-form button[type="submit"]:hover {
+    background: #0859b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(10, 110, 211, 0.4);
+}
+
+.contact-form button[type="submit"]:disabled {
+    background: var(--text-gray);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===== RESPONSIVE CONTACT FORM ===== */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-item {
         display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-        color: var(--text-light);
-      }
+        margin: 1rem 0;
+        text-align: center;
+    }
 
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .contact-form button[type="submit"] {
         padding: 1rem;
-        background: var(--primary-color);
-        border: 1px solid rgba(10, 110, 211, 0.3);
-        border-radius: 8px;
-        color: var(--text-light);
         font-size: 1rem;
-        font-family: "Poppins", sans-serif;
-        transition: var(--transition);
-      }
+    }
+}
 
-      .form-group input:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: var(--secondary-color);
-        box-shadow: 0 0 0 3px rgba(10, 110, 211, 0.1);
-      }
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 1.5rem 1rem;
+    }
 
-      .form-group textarea {
-        resize: vertical;
+    .contact-form h5 {
+        font-size: 0.9rem;
+    }
+
+    .contact-form textarea {
         min-height: 150px;
-      }
-
-      .submit-btn {
-        width: 100%;
-        padding: 1.2rem;
-        background: var(--secondary-color);
-        color: var(--text-light);
-        border: none;
-        border-radius: 50px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: var(--transition);
-      }
-
-      .submit-btn:hover {
-        background: #0859b3;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(10, 110, 211, 0.4);
-      }
-
+    }
+}
       /* ===== CTA SECTION ===== */
       .cta-section {
         padding: 8rem 5%;
@@ -1427,25 +1511,35 @@
             <a href="tel:+6285232416239">+62 852-3241-6239</a>
           </div>
         </div>
-      <form class="contact-form" action="https://formspree.io/f/xvgebelz" method="POST">
-          <input type="hidden" name="_subject" value="New contact form submission">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+   <form class="contact-form" action="https://formspree.io/f/xvgebelz" method="POST">
+  <h2 class="fw-bolder">Contact Me</h2>
+  
+  <div class="email-name">
+    <label>
+      <h5>Email<span class="req">*</span></h5>
+      <input type="email" name="email" placeholder="example@mail.com" required />
+    </label>
   </div>
 
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
+  <label>
+    <h5>Full Name<span class="req">*</span></h5>
+    <input type="text" name="name" placeholder="John Doe" required />
+  </label>
+
+  <label class="msg">
+    <h5>Message<span class="req">*</span></h5>
+    <textarea name="message" placeholder="Hi!" required></textarea>
+  </label>
+
+  <!-- Hidden field untuk subject -->
+  <input type="hidden" name="_subject" value="New contact from Portfolio Website" />
+  
+  <!-- Redirect setelah submit (opsional) -->
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+
+  <div class="btn">
+    <button type="submit">Send</button>
   </div>
-
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" required></textarea>
-  </div>
-
-  <button type="submit" class="submit-btn">Send Message</button>
-
 </form>
 
     </section>
@@ -1619,22 +1713,49 @@
         });
       });
 
-      // FORM SUBMISSION
-      const contactForm = document.querySelector(".contact-form");
+    // ===== FORM SUBMISSION WITH FORMSPREE =====
+const contactForm = document.querySelector('.contact-form');
 
-      contactForm.addEventListener("submit", (e) => {
-        // e.preventDefault();
-
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        alert(
-          `Thank you ${name}! Your message has been received. I will contact you at ${email} soon.`
-        );
-
-        contactForm.reset();
-      });
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    // Disable button dan ubah text
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    
+    try {
+        // Kirim form data ke Formspree
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            // Success
+            alert('Thank you! Your message has been sent successfully.');
+            contactForm.reset();
+        } else {
+            // Error dari Formspree
+            const data = await response.json();
+            alert('Oops! There was a problem submitting your form: ' + (data.error || 'Unknown error'));
+        }
+    } catch (error) {
+        // Network error
+        alert('Oops! There was a problem submitting your form. Please try again.');
+        console.error('Form submission error:', error);
+    } finally {
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+});
 
       // DYNAMIC YEAR IN FOOTER
       const footerCopyright = document.querySelector(".footer-copyright");
